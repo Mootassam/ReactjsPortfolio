@@ -3,6 +3,8 @@ import portfolio6 from "../../assets/portfolio6.jpg";
 import portfolio1 from "../../assets/portfolio1.png";
 import portfolio2 from "../../assets/portfolio2.png";
 import { client, urlFor } from "../../client";
+import { motion } from "framer-motion";
+
 function Portfolio() {
   const [portfolio, setPortfolio] = useState([]);
   useEffect(() => {
@@ -33,7 +35,10 @@ function Portfolio() {
             <li>Detail</li>
           </ul>
         </div>
-        <div className='images'>
+        <motion.div
+          whileHover={{ scale: [1, 0.9] }}
+          transition={{ duration: 0.25 }}
+          className='images'>
           <div>
             <img loading='lazy' src={portfolio6} alt='image of potfolio' />
           </div>
@@ -52,7 +57,7 @@ function Portfolio() {
           <div>
             <img loading='lazy' src={portfolio6} alt='image of potfolio' />
           </div>
-        </div>
+        </motion.div>
         <div className='button'>load More</div>
       </div>
       <div className='background__left'>

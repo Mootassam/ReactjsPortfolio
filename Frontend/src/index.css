@@ -1186,8 +1186,13 @@ a {
   margin: auto;
   padding-bottom: 3.5rem;
 }
-.images div {
+.images > div {
+  cursor: pointer;
   transform: scale(1) translateZ(0);
+  position: relative;
+}
+.images > div:hover {
+  box-shadow: 0 0 25px rgba(208, 208, 208, 0.758);
 }
 .images > div > img {
   width: 100%;
