@@ -60,7 +60,7 @@ function Header() {
                   </a>
                 </li>
                 <li>
-                  <a href='./documents/Resume.pdf' download=''>
+                  <a href='/src/assets/document/Resume.pdf' download>
                     Download CV
                   </a>
                 </li>
@@ -88,9 +88,8 @@ function Header() {
                   <h3 className='h3__sm'>Hello, I'm</h3>
                   <h3 className='h3__lg'>{item.name}</h3>
                   <p className='p__content'>
-                    A <span className='span__content'> Creative Designer</span>
-                    From
-                    <span className='span__place'> New York</span>
+                    A <span className='span__content'>Web developer</span> From
+                    <span className='span__place'> Tunis </span>
                   </p>
                   <div className='text'>{item.description}</div>
                   <div className='left__buttons'>
