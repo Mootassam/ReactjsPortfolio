@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import portfolio6 from "../../assets/estate.png";
 import portfolio1 from "../../assets/portfolio1.png";
 import portfolio2 from "../../assets/portfolio2.png";
 import { client, urlFor } from "../../client";
