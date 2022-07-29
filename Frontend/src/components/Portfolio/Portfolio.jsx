@@ -17,7 +17,6 @@ function Portfolio() {
 
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
-
       if (item === "All") {
         setFilterWork(images);
       } else {
@@ -29,6 +28,7 @@ function Portfolio() {
     const query = '*[_type == "portfolio"]';
     client.fetch(query).then(async (res) => {
       await setImage(res);
+      await setFilterWork(res);
     });
   }, []);
   console.log("Portfolio", images);
@@ -45,20 +45,23 @@ function Portfolio() {
       <div className='portfolio__images'>
         <div className='header'>
           <ul>
-            <li>All</li>
-            <li>Youtube</li>
-            <li>Vimeo</li>
-            <li>Soundcloud</li>
-            <li>Popup</li>
-            <li>Detail</li>
+            {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
+              (item) => (
+                <li
+                  onClick={() => handleWorkFilter(item)}
+                  className={`${activeFilter === item ? "active" : ""}`}>
+                  {item}
+                </li>
+              )
+            )}
           </ul>
         </div>
         <motion.div
           animate={animateCard}
           transition={{ duration: 0.5, delayChildren: 0.5 }}
           className='images'>
-          {images.map((item) => (
-            <div>
+          {filterWork.map((item, index) => (
+            <div key={index}>
               <img
                 loading='lazy'
                 src={urlFor(item.imgUrl)}

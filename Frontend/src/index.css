@@ -1178,9 +1178,12 @@ a {
   gap: 3.125rem;
   padding: 4.875rem 0 3.5rem;
 }
-.header > ul > li:nth-child(1) {
+.active {
   color: var(--button-primary);
 }
+/* .header > ul > li:nth-child(1) {
+  color: var(--button-primary);
+} */
 .header > ul > li {
   cursor: pointer;
 }
