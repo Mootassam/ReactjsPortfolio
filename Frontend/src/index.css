@@ -46,6 +46,11 @@ body {
   width: 100%;
 }
 
+.app__flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .audio {
   bottom: 30px;
   right: 0;
@@ -1186,14 +1191,15 @@ a {
   margin: auto;
   padding-bottom: 3.5rem;
 }
+
 .images > div {
   cursor: pointer;
   transform: scale(1) translateZ(0);
   position: relative;
 }
-.images > div:hover {
+/* .images > div:hover {
   box-shadow: 0 0 25px rgba(208, 208, 208, 0.758);
-}
+} */
 .images > div > img {
   width: 100%;
   object-fit: cover;
@@ -1332,6 +1338,46 @@ a {
   object-fit: cover;
   height: 50%;
   width: 50%;
+}
+
+.app__work-hover {
+  position: absolute;
+  display: flex;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.app__work-hover div {
+  position: relative;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin: 1rem;
+  font-family: var(--font-base);
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.fa-brands,
+.fa-solid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: #ffffff;
+  font-size: 30px;
 }
 
 /* Styling the service section for the mobile verions  */
