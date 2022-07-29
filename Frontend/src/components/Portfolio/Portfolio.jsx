@@ -94,7 +94,7 @@ function Portfolio() {
             </div>
           ))}
         </motion.div>
-        <div className='button'>load More</div>
+        {/* <div className='button'>load More</div> */}
       </div>
       <div className='background__left'>
         <img loading='lazy' src={portfolio1} alt='photo background image' />

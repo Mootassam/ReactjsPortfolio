@@ -32,7 +32,7 @@ function Contact() {
               </div>
               <div className='address__detaill'>
                 <h3>Address</h3>
-                <span> {item.address} </span>
+                <span>{item.address}</span>
               </div>
             </div>
             <div className='left__email'>
