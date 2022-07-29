@@ -1343,7 +1343,7 @@ a {
 .app__work-hover {
   position: absolute;
   display: flex;
-
+  flex-direction: column;
   top: 0;
   left: 0;
   bottom: 0;
@@ -1355,7 +1355,11 @@ a {
   opacity: 0;
   transition: all 0.3s ease;
 }
-.app__work-hover div {
+
+.work__Link {
+  display: flex;
+}
+.work__Link div {
   position: relative;
 
   width: 50px;
@@ -1375,7 +1379,6 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   font-size: 30px;
 }
 

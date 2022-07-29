@@ -72,24 +72,30 @@ function Portfolio() {
                   staggerChildren: 0.5,
                 }}
                 className='app__work-hover app__flex'>
-                <a href={item.projectLink} target='_blank' rel='noreferrer'>
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.9] }}
-                    transition={{ duration: 0.25 }}
-                    className='app__flex'>
-                    <i className='fa-solid fa-eye'></i>
-                  </motion.div>
-                </a>
-                <a href={item.codeLink} target='_blank' rel='noreferrer'>
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.9] }}
-                    transition={{ duration: 0.25 }}
-                    className='app__flex'>
-                    <i className='fa-brands fa-github'></i>
-                  </motion.div>
-                </a>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p style={{ color: "#FFFFFF" }}>{item.description}</p>
+                </div>
+                <div className='work__Link'>
+                  <a href={item.projectLink} target='_blank' rel='noreferrer'>
+                    <motion.div
+                      whileInView={{ scale: [0, 1] }}
+                      whileHover={{ scale: [1, 0.9] }}
+                      transition={{ duration: 0.25 }}
+                      className='app__flex'>
+                      <i className='fa-solid fa-eye'></i>
+                    </motion.div>
+                  </a>
+                  <a href={item.codeLink} target='_blank' rel='noreferrer'>
+                    <motion.div
+                      whileInView={{ scale: [0, 1] }}
+                      whileHover={{ scale: [1, 0.9] }}
+                      transition={{ duration: 0.25 }}
+                      className='app__flex'>
+                      <i className='fa-brands fa-github'></i>
+                    </motion.div>
+                  </a>
+                </div>
               </motion.div>
             </div>
           ))}
