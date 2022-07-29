@@ -7,10 +7,19 @@ import { motion } from "framer-motion";
 
 function Portfolio() {
   const [images, setImage] = useState([]);
-  const [activeFilter, setActiveFilter] = useState("All");
   const [filterWork, setFilterWork] = useState([]);
+  const [activeFilter, setActiveFilter] = useState("All");
 
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+
+  useEffect(() => {
+    const query = '*[_type == "portfolio"]';
+    client.fetch(query).then((res) => {
+      setImage(res);
+      setFilterWork(res);
+    });
+  }, []);
+
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0 }]);
@@ -24,14 +33,9 @@ function Portfolio() {
       }
     }, 500);
   };
-  useEffect(() => {
-    const query = '*[_type == "portfolio"]';
-    client.fetch(query).then(async (res) => {
-      await setImage(res);
-      await setFilterWork(res);
-    });
-  }, []);
-  console.log("Portfolio", images);
+
+  console.log(images);
+
   return (
     <div className='app__portfolio' id='portfolio'>
       <div className='portfolio__header'>
