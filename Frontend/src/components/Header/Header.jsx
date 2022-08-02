@@ -81,7 +81,7 @@ function Header() {
                       </a>
                     </li>
                     <li>
-                      <a href='/src/assets/document/Resume.pdf' download>
+                      <a href='/Resume.pdf' download>
                         Download CV
                       </a>
                     </li>
