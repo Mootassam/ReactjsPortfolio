@@ -16,37 +16,36 @@ function Service() {
       <div className='service_list'>
         <div>
           <div className='list__right'>
-            <h3>Creative Design</h3>
+            <h3>FRONTEND APPS</h3>
             <span>
               Starts from <span className='price'>$99 </span>
             </span>
             <p>
-              Web design refers to the design of websites that are displayed on
-              the internet. It usually refers to the user experience aspects of
-              website development.
+              Build client-side applications with modern features like SPA and
+              maintain semantic coding style among other best practices for SEO
+              optimisation. Use modern tech such as Nuxt (Vue.js), TailwindCSS,
+              and GSAP.
             </p>
           </div>
         </div>
         <div>
           <div className='list__right'>
-            <h3>Graphic Design</h3>
+            <h3>BACKEND APPS</h3>
             <span>
-              Starts from <span className='price'> $199 </span>{" "}
+              Starts from <span className='price'> $199 </span>
             </span>
-            Web design refers to the design of websites that are displayed on
-            the internet. It usually refers to the user experience aspects of
-            website development Web Design.
+            Build scalable and maintainable server applications using modern
+            technology stacks such as Node.js, Express, and MongoDB
           </div>
         </div>
         <div>
           <div className='list__right'>
-            <h3>UI/UX Design</h3>
+            <h3>NATIVE APPS</h3>
             <span>
               Starts from <span className='price'>$299</span>
-            </span>{" "}
-            Web design refers to the design of websites that are displayed on
-            the internet. It usually refers to the user experience aspects of
-            website development.
+            </span>
+            Use Flutter for building simple native mobile applications. Flutter
+            is modern, fast, cross-platform, and popular.
           </div>
         </div>
         <div>

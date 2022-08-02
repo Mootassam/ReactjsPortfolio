@@ -18,8 +18,8 @@ function Contact() {
         <span className='span__header'> Contact Me</span>
         <h3 className='h3__header'>I Want To Hear From You</h3>
         <p className='p__header'>
-          Please fill out the form on this section to contact with me. Or call
-          between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday
+          Feel free to Contact me by submitting the form below and I will get
+          back to you as soon as possible
         </p>
       </div>
 

@@ -41,8 +41,8 @@ function Portfolio() {
         <span className='span__header'> Portfolio</span>
         <h3 className='h3__header'>My Amazing Works</h3>
         <p className='p__header'>
-          Most common methods for designing websites that work well on desktop
-          is responsive and adaptive design
+          Here you will find some of the personal and clients projects that I
+          created with each project containing its own case study
         </p>
       </div>
       <div className='portfolio__images'>
