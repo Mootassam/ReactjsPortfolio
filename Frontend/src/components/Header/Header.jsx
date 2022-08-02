@@ -53,7 +53,7 @@ function Header() {
                       </a>
                     </li>
                     <li>
-                      <a href='#about ' className='menue' onClick={activeLink}>
+                      <a href='#about' className='menue' onClick={activeLink}>
                         About
                       </a>
                     </li>
@@ -118,7 +118,10 @@ function Header() {
                       </p>
                       <div className='text'>{item.description}</div>
                       <div className='left__buttons'>
-                        <div className='button'>About Me</div>
+                        <div className='button'>
+                          {" "}
+                          <a href='#about'> About Me </a>
+                        </div>
                         <div className='social__media' />
                       </div>
                     </div>

@@ -92,7 +92,10 @@ function About() {
                   <div className='right__detaills'>
                     <p className='p__header'>{item.description}</p>
                   </div>
-                  <div className='button'>Hire me</div>
+                  <div className='button'>
+                    {" "}
+                    <a href='#contact'> Hire me</a>
+                  </div>
                 </div>
                 <div className='about__images'>
                   <div className='image__about__left'>
