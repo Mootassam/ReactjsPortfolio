@@ -96,54 +96,62 @@ function Contact() {
           </div>
         ))}
         <div className='contact__right'>
-          {(formData.email === "" || formData.message === "") && (
-            <p style={style}> Please Fill Required Fields</p>
-          )}
+          {!isFormSubmitted ? (
+            <>
+              {(formData.email === "" || formData.message === "") && (
+                <p style={style}> Please Fill Required Fields</p>
+              )}
 
-          <div>
-            <input
-              type='text'
-              placeholder='Your Name'
-              name='username'
-              value={username}
-              onChange={handleChangeInput}
-            />
-            <input
-              type='text'
-              placeholder='Your Email (*) '
-              name='email'
-              value={email}
-              onChange={handleChangeInput}
-            />
-          </div>
+              <div>
+                <input
+                  type='text'
+                  placeholder='Your Name'
+                  name='username'
+                  value={username}
+                  onChange={handleChangeInput}
+                />
+                <input
+                  type='text'
+                  placeholder='Your Email (*) '
+                  name='email'
+                  value={email}
+                  onChange={handleChangeInput}
+                />
+              </div>
 
-          <div>
-            <input
-              type='text'
-              placeholder='Your Phone '
-              name='phone'
-              value={phone}
-              onChange={handleChangeInput}
-            />
-            <input
-              placeholder='Subject'
-              type='text'
-              name='subject'
-              value={subject}
-              onChange={handleChangeInput}
-            />
-          </div>
-          <div>
-            <textarea
-              placeholder='Write Your message here  (*) '
-              value={message}
-              name='message'
-              onChange={handleChangeInput}
-            />
-          </div>
-          {formData.email !== "" && formData.message !== "" && (
-            <div className='button' onClick={handleSubmit}>
-              {!loading ? "Send Message" : "Sending..."}
+              <div>
+                <input
+                  type='text'
+                  placeholder='Your Phone '
+                  name='phone'
+                  value={phone}
+                  onChange={handleChangeInput}
+                />
+                <input
+                  placeholder='Subject'
+                  type='text'
+                  name='subject'
+                  value={subject}
+                  onChange={handleChangeInput}
+                />
+              </div>
+              <div>
+                <textarea
+                  placeholder='Write Your message here  (*) '
+                  value={message}
+                  name='message'
+                  onChange={handleChangeInput}
+                />
+              </div>
+              {formData.email !== "" && formData.message !== "" && (
+                <div className='button' onClick={handleSubmit}>
+                  {!loading ? "Send Message" : "Sending..."}
+                </div>
+              )}
+            </>
+          ) : (
+            <div>
+              <h3 className='head-text'>Thank you for getting in touch!</h3>
             </div>
           )}
         </div>
