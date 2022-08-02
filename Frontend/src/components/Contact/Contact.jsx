@@ -47,6 +47,10 @@ function Contact() {
       })
       .catch((err) => console.log(err));
   };
+  const style = {
+    color: "red",
+    padding: "0 0 12px 0",
+  };
 
   return (
     <div className='app__contact' id='contact'>
@@ -92,6 +96,10 @@ function Contact() {
           </div>
         ))}
         <div className='contact__right'>
+          {(formData.email === "" || formData.message === "") && (
+            <p style={style}> Please Fill Required Fields</p>
+          )}
+
           <div>
             <input
               type='text'
@@ -102,12 +110,13 @@ function Contact() {
             />
             <input
               type='text'
-              placeholder='Your Email'
+              placeholder='Your Email (*) '
               name='email'
               value={email}
               onChange={handleChangeInput}
             />
           </div>
+
           <div>
             <input
               type='text'
@@ -126,15 +135,17 @@ function Contact() {
           </div>
           <div>
             <textarea
-              placeholder='Write Your message here'
+              placeholder='Write Your message here  (*) '
               value={message}
               name='message'
               onChange={handleChangeInput}
             />
           </div>
-          <div className='button' onClick={handleSubmit}>
-            Submit Now
-          </div>
+          {formData.email !== "" && formData.message !== "" && (
+            <div className='button' onClick={handleSubmit}>
+              {!loading ? "Send Message" : "Sending..."}
+            </div>
+          )}
         </div>
         <div className='address__images'>
           <div className='images__left'>
