@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React, { useEffect, useState } from "react";
 import { client, urlFor } from "../../client";
 import Spinner from "../../container/Spinner/Spinner";
@@ -15,6 +16,14 @@ function Header() {
       setLoading(false);
     });
   }, []);
+
+  const links__ul = document.querySelectorAll(".menue");
+  const activeLink = (e) => {
+    for (let i = 0; i < links__ul.length; i++) {
+      links__ul[i].className = links__ul[i].className.replace("current", "");
+    }
+    e.currentTarget.className += " current";
+  };
 
   return (
     <>
@@ -39,12 +48,12 @@ function Header() {
                       <a
                         href='#home'
                         className='menue current'
-                        onClick={showCurrent}>
+                        onClick={activeLink}>
                         Home
                       </a>
                     </li>
                     <li>
-                      <a href='#about ' className='menue' onClick={showCurrent}>
+                      <a href='#about ' className='menue' onClick={activeLink}>
                         About
                       </a>
                     </li>
@@ -52,28 +61,22 @@ function Header() {
                       <a
                         href='#portfolio'
                         className='menue'
-                        onClick={showCurrent}>
+                        onClick={activeLink}>
                         Portfolio
                       </a>
                     </li>
                     <li>
-                      <a href='#skills' className='menue' onClick={showCurrent}>
+                      <a href='#skills' className='menue' onClick={activeLink}>
                         Skills
                       </a>
                     </li>
                     <li>
-                      <a
-                        href='#service'
-                        className='menue'
-                        onClick={showCurrent}>
+                      <a href='#service' className='menue' onClick={activeLink}>
                         Service
                       </a>
                     </li>
                     <li>
-                      <a
-                        href='#contact'
-                        className='menue'
-                        onClick={showCurrent}>
+                      <a href='#contact' className='menue' onClick={activeLink}>
                         Contact
                       </a>
                     </li>

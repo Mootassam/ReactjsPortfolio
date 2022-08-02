@@ -36,8 +36,6 @@ function Portfolio() {
     }, 500);
   };
 
-  console.log(images);
-
   return (
     <>
       {loading && <Spinner />}
