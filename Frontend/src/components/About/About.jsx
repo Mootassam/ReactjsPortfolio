@@ -10,94 +10,103 @@ import process2 from "../../assets/process2.png";
 import process3 from "../../assets/process3.png";
 
 import { motion } from "framer-motion";
+import Spinner from "../../container/Spinner/Spinner";
 
 function About() {
   const [About, setAbout] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const query = '*[_type == "about"]';
     client.fetch(query).then(async (res) => {
+      setLoading(true);
       await setAbout(res);
+      setLoading(false);
     });
   }, []);
 
   return (
     <>
-      <div className='app__detaills'>
-        <motion.div animate={{ y: 0 }} className='detaill_target'>
-          <div className='detaills__image'>
-            <img loading='lazy' src={process1} alt='' />
-            <img loading='lazy' src={target} alt='Image Target' />
-          </div>
-          <h3>Pixel Perfect</h3>
-          <p>
-            Most common methods for designing websites that work well on desktop
-            is responsive and adaptive design.
-          </p>
-        </motion.div>
-        <div className='detaill__brush'>
-          <div className='detaills__image'>
-            <img loading='lazy' src={process2} alt='' />
-            <img loading='lazy' src={brush} alt='Image Brush' />
-          </div>
-          <h3>High Quality</h3>
-          <p>
-            Most common methods for designing websites that work well on desktop
-            is responsive and adaptive design.
-          </p>
-        </div>
-        <div className='detaill__energy'>
-          <div className='detaills__image'>
-            <img loading='lazy' src={process3} alt='' />
-            <img loading='lazy' src={energy} alt='Image Energy' />
-          </div>
-          <h3>Awesome Idea</h3>
-          <p>
-            Most common methods for designing websites that work well on desktop
-            is responsive and adaptive design.
-          </p>
-        </div>
-      </div>
-
-      <div className='app__about' id='about'>
-        {About.map((item) => (
-          <div className='about'>
-            <div className='about__left'>
-              {/* Image 18 Years of Success 9 Total Projects */}
-              <img loading='lazy' src={urlFor(item.image)} alt='About' />
-              <div className='about__years'>
-                <span className='years'> 18</span>
-                <span className='project'>
-                  years of <br />
-                  success
-                </span>
+      {loading && <Spinner />}
+      {!loading && (
+        <>
+          {" "}
+          <div className='app__detaills'>
+            <motion.div animate={{ y: 0 }} className='detaill_target'>
+              <div className='detaills__image'>
+                <img loading='lazy' src={process1} alt='' />
+                <img loading='lazy' src={target} alt='Image Target' />
               </div>
-              <div className='about__project'>
-                <span className='totale__project'> 52</span>
-                <span className='project'>
-                  Total <br />
-                  Projects
-                </span>
+              <h3>Pixel Perfect</h3>
+              <p>
+                Most common methods for designing websites that work well on
+                desktop is responsive and adaptive design.
+              </p>
+            </motion.div>
+            <div className='detaill__brush'>
+              <div className='detaills__image'>
+                <img loading='lazy' src={process2} alt='' />
+                <img loading='lazy' src={brush} alt='Image Brush' />
               </div>
+              <h3>High Quality</h3>
+              <p>
+                Most common methods for designing websites that work well on
+                desktop is responsive and adaptive design.
+              </p>
             </div>
-            <div className='about__right'>
-              <span className='span__header'>{item.jobtitle}</span>
-              <h3 className='h3__about'>{item.title}</h3>
-              <div className='right__detaills'>
-                <p className='p__header'>{item.description}</p>
+            <div className='detaill__energy'>
+              <div className='detaills__image'>
+                <img loading='lazy' src={process3} alt='' />
+                <img loading='lazy' src={energy} alt='Image Energy' />
               </div>
-              <div className='button'>Hire me</div>
-            </div>
-            <div className='about__images'>
-              <div className='image__about__left'>
-                <img loading='lazy' src={about1} alt='About Image' />
-              </div>
-              <div className='images__about__right'>
-                <img loading='lazy' src={about2} alt='About Image' />
-              </div>
+              <h3>Awesome Idea</h3>
+              <p>
+                Most common methods for designing websites that work well on
+                desktop is responsive and adaptive design.
+              </p>
             </div>
           </div>
-        ))}
-      </div>
+          <div className='app__about' id='about'>
+            {About.map((item) => (
+              <div className='about'>
+                <div className='about__left'>
+                  {/* Image 18 Years of Success 9 Total Projects */}
+                  <img loading='lazy' src={urlFor(item.image)} alt='About' />
+                  <div className='about__years'>
+                    <span className='years'> 18</span>
+                    <span className='project'>
+                      years of <br />
+                      success
+                    </span>
+                  </div>
+                  <div className='about__project'>
+                    <span className='totale__project'> 52</span>
+                    <span className='project'>
+                      Total <br />
+                      Projects
+                    </span>
+                  </div>
+                </div>
+                <div className='about__right'>
+                  <span className='span__header'>{item.jobtitle}</span>
+                  <h3 className='h3__about'>{item.title}</h3>
+                  <div className='right__detaills'>
+                    <p className='p__header'>{item.description}</p>
+                  </div>
+                  <div className='button'>Hire me</div>
+                </div>
+                <div className='about__images'>
+                  <div className='image__about__left'>
+                    <img loading='lazy' src={about1} alt='About Image' />
+                  </div>
+                  <div className='images__about__right'>
+                    <img loading='lazy' src={about2} alt='About Image' />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </>
   );
 }
