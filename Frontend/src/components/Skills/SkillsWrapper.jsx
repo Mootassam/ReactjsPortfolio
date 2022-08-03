@@ -61,47 +61,9 @@ const SkillsWrapper = styled.div`
     width: 50%;
   }
 
-  .app__work-hover {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0.5rem;
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
+  
 
-  .work__Link {
-    display: flex;
-  }
-  .work__Link div {
-    position: relative;
 
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    margin: 1rem;
-    font-family: var(--font-base);
-    font-weight: 800;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .fa-brands,
-  .fa-solid {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-  }
 
   /* Styling the service section for the mobile verions  */
 

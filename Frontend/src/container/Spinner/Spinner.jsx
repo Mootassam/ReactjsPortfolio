@@ -1,12 +1,15 @@
 import React from "react";
+import SpinnerWrapper from "./SpinnerWrapper";
 
 export default function Spinner() {
   return (
-    <div className='spinner'>
-      <div className='app__spinner'>
-        <div className='loader'></div>
-        <p>Loading. Just a sec...</p>
+    <SpinnerWrapper>
+      <div className='spinner'>
+        <div className='app__spinner'>
+          <div className='loader'></div>
+          <p>Loading. Just a sec...</p>
+        </div>
       </div>
-    </div>
+    </SpinnerWrapper>
   );
 }
