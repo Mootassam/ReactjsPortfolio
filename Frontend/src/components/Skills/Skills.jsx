@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import skillsImage from "../../assets/skills.jpg";
 import { client, urlFor } from "../../client";
 import Spinner from "../../container/Spinner/Spinner";
+import SkillsWrapper from "./SkillsWrapper";
 function Skills() {
   const [skills, setSkills] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,7 +16,7 @@ function Skills() {
     });
   }, []);
   return (
-    <>
+    <SkillsWrapper>
       {loading && <Spinner />}
       {!loading && (
         <div className='app__skills' id='skills'>
@@ -52,7 +53,7 @@ function Skills() {
           </div>
         </div>
       )}
-    </>
+    </SkillsWrapper>
   );
 }
 

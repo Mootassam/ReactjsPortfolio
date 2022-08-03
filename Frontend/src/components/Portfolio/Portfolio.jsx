@@ -4,6 +4,7 @@ import portfolio2 from "../../assets/portfolio2.png";
 import { client, urlFor } from "../../client";
 import { motion } from "framer-motion";
 import Spinner from "../../container/Spinner/Spinner";
+import PortfolioWrapper from "./PortfolioWrapper";
 
 function Portfolio() {
   const [images, setImage] = useState([]);
@@ -37,7 +38,7 @@ function Portfolio() {
   };
 
   return (
-    <>
+    <PortfolioWrapper>
       {loading && <Spinner />}
       {!loading && (
         <div className='app__portfolio' id='portfolio'>
@@ -123,7 +124,7 @@ function Portfolio() {
           </div>
         </div>
       )}
-    </>
+    </PortfolioWrapper>
   );
 }
 

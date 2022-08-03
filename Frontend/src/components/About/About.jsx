@@ -11,6 +11,7 @@ import process3 from "../../assets/process3.png";
 
 import { motion } from "framer-motion";
 import Spinner from "../../container/Spinner/Spinner";
+import AboutWrapper from "./AboutWrapper";
 
 function About() {
   const [About, setAbout] = useState([]);
@@ -28,7 +29,7 @@ function About() {
     <>
       {loading && <Spinner />}
       {!loading && (
-        <>
+        <AboutWrapper>
           {" "}
           <div className='app__detaills'>
             <motion.div animate={{ y: 0 }} className='detaill_target'>
@@ -108,7 +109,7 @@ function About() {
               </div>
             ))}
           </div>
-        </>
+        </AboutWrapper>
       )}
     </>
   );

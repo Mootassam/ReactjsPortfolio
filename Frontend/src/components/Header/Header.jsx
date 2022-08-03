@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { client, urlFor } from "../../client";
 import Spinner from "../../container/Spinner/Spinner";
+import HeaderWrapper from "./HeaderWrapper";
 function Header() {
   const showCurrent = () => {};
   const showMenue = () => {};
@@ -26,7 +27,7 @@ function Header() {
   };
 
   return (
-    <>
+    <HeaderWrapper>
       {loading && <Spinner />}
       {!loading && (
         <div className='app__header' id='home'>
@@ -160,7 +161,7 @@ function Header() {
           </div>
         </div>
       )}
-    </>
+    </HeaderWrapper>
   );
 }
 
