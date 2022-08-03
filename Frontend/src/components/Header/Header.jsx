@@ -4,9 +4,14 @@ import { client, urlFor } from "../../client";
 import Spinner from "../../container/Spinner/Spinner";
 import HeaderWrapper from "./HeaderWrapper";
 function Header() {
-  const showCurrent = () => {};
-  const showMenue = () => {};
-  const hideMenue = () => {};
+  const showMenue = () => {
+    const header__links = document.querySelector(".header__links");
+    header__links.style.display = "flex";
+  };
+  const hideMenue = () => {
+    const header__links = document.querySelector(".header__links");
+    header__links.style.display = "none";
+  };
   const [header, setHeader] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -36,7 +41,6 @@ function Header() {
               <div className='content'>
                 <div className='header__logo'>
                   <img
-                    loading='lazy'
                     src={
                       "https://marketifythemes.net/html/dizme/img/logo/dark.png"
                     }
@@ -127,31 +131,15 @@ function Header() {
                       </div>
                     </div>
                     <div className='content__right'>
-                      <img
-                        loading='lazy'
-                        src={urlFor(item.avatar)}
-                        alt=' avatar'
-                      />
+                      <img src={urlFor(item.avatar)} alt=' avatar' />
                       <div className='reactjs'>
-                        <img
-                          loading='lazy'
-                          src={urlFor(item.skills1)}
-                          alt='photo reactjs'
-                        />
+                        <img src={urlFor(item.skills1)} alt='photo reactjs' />
                       </div>
                       <div className='redux'>
-                        <img
-                          loading='lazy'
-                          src={urlFor(item.skills2)}
-                          alt='photo redux'
-                        />
+                        <img src={urlFor(item.skills2)} alt='photo redux' />
                       </div>
                       <div className='scss'>
-                        <img
-                          loading='lazy'
-                          src={urlFor(item.skills3)}
-                          alt='photo redux'
-                        />
+                        <img src={urlFor(item.skills3)} alt='photo redux' />
                       </div>
                     </div>
                   </div>

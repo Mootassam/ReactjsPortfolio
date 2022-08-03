@@ -34,11 +34,7 @@ function Skills() {
               {skills.map((item) => (
                 <div>
                   <div className='skills__icon'>
-                    <img
-                      loading='lazy'
-                      src={urlFor(item.icon)}
-                      alt='photo of skills'
-                    />
+                    <img src={urlFor(item.icon)} alt='photo of skills' />
                   </div>
 
                   <div className='skills__text'>
@@ -49,7 +45,7 @@ function Skills() {
             </div>
           </div>
           <div className='skills__right'>
-            <img loading='lazy' src={skillsImage} alt='skills photo' />
+            <img src={skillsImage} alt='skills photo' />
           </div>
         </div>
       )}

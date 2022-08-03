@@ -63,10 +63,10 @@ function Service() {
           </div>
         </div>
         <div className='service__image__left'>
-          <img loading='lazy' src={service5} alt='photo Service' />
+          <img src={service5} alt='photo Service' />
         </div>
         <div className='service__image__right'>
-          <img loading='lazy' src={servic6} alt='photo Service' />
+          <img src={servic6} alt='photo Service' />
         </div>
       </div>
     </ServiceWrapper>

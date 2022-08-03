@@ -70,11 +70,7 @@ function Portfolio() {
               className='images'>
               {filterWork.map((item, index) => (
                 <div key={index}>
-                  <img
-                    loading='lazy'
-                    src={urlFor(item.imgUrl)}
-                    alt='image of potfolio'
-                  />
+                  <img src={urlFor(item.imgUrl)} alt='image of potfolio' />
                   <motion.div
                     whileHover={{ opacity: [0, 1] }}
                     transition={{
@@ -117,10 +113,10 @@ function Portfolio() {
             {/* <div className='button'>load More</div> */}
           </div>
           <div className='background__left'>
-            <img loading='lazy' src={portfolio1} alt='photo background image' />
+            <img src={portfolio1} alt='photo background image' />
           </div>
           <div className='background__bottom'>
-            <img loading='lazy' src={portfolio2} alt='photo background image' />
+            <img src={portfolio2} alt='photo background image' />
           </div>
         </div>
       )}
