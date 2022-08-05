@@ -30,12 +30,11 @@ function About() {
       {loading && <Spinner />}
       {!loading && (
         <AboutWrapper>
-          {" "}
           <div className='app__detaills'>
             <motion.div animate={{ y: 0 }} className='detaill_target'>
               <div className='detaills__image'>
                 <img src={process1} alt='' />
-                <img src={target} alt='Image Target' />
+                <img src={target} alt='Target' />
               </div>
               <h3>Pixel Perfect code</h3>
               <p>
@@ -46,7 +45,7 @@ function About() {
             <div className='detaill__brush'>
               <div className='detaills__image'>
                 <img src={process2} alt='' />
-                <img src={brush} alt='Image Brush' />
+                <img src={brush} alt='Brush' />
               </div>
               <h3>High Quality</h3>
               <p>
@@ -57,7 +56,7 @@ function About() {
             <div className='detaill__energy'>
               <div className='detaills__image'>
                 <img src={process3} alt='' />
-                <img src={energy} alt='Image Energy' />
+                <img src={energy} alt='Energy' />
               </div>
               <h3>Awesome Idea</h3>
               <p>
