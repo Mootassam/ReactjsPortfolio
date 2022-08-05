@@ -24,7 +24,7 @@ const SkillsWrapper = styled.div`
     padding-right: 50px;
   }
   .skills__right {
-    padding-left: 100px;
+    padding-left: 140px;
   }
   .skills__right > img {
     max-height: 800px;
@@ -61,10 +61,6 @@ const SkillsWrapper = styled.div`
     width: 50%;
   }
 
-  
-
-
-
   /* Styling the service section for the mobile verions  */
 
   @media (max-width: 1478.4px) {
@@ -100,7 +96,7 @@ const SkillsWrapper = styled.div`
       flex-basis: auto;
     }
     .skills__left {
-      margin-top: 7rem;
+      margin-top: 3.125rem;
       padding: 0;
       align-items: center;
       display: flex;

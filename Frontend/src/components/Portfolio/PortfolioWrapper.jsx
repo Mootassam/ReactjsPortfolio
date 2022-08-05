@@ -70,12 +70,19 @@ const PortfolioWrapper = styled.div`
     gap: 25px;
     margin: auto;
     padding-bottom: 3.5rem;
+    place-items: center;
   }
 
   .images > div {
     cursor: pointer;
     transform: scale(1) translateZ(0);
     position: relative;
+    border-raduis: 12px;
+  }
+  .images > div > img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
   }
   .app__work-hover {
     position: absolute;
@@ -125,12 +132,6 @@ const PortfolioWrapper = styled.div`
   /* .images > div:hover {
                     box-shadow: 0 0 25px rgba(208, 208, 208, 0.758);
                   } */
-  .images > div > img {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-    border-radius: 12px;
-  }
 
   /* ***** Syling the portfolio version mobile ***** */
 

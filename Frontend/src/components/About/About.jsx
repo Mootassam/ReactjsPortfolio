@@ -37,7 +37,7 @@ function About() {
                 <img src={process1} alt='' />
                 <img src={target} alt='Image Target' />
               </div>
-              <h3>Pixel Perfect</h3>
+              <h3>Pixel Perfect code</h3>
               <p>
                 Most common methods for designing websites that work well on
                 desktop is responsive and adaptive design.
