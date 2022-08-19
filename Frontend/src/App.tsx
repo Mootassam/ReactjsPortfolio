@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "lazysizes";
-
 import {
   Header,
   About,
@@ -11,7 +10,6 @@ import {
 } from "./components";
 import Spinner from "./container/Spinner/Spinner";
 import { client, urlFor } from "src/client";
-
 function App() {
   const [header, setHeader] = useState([]);
   const [loading, setLoading] = useState(true);

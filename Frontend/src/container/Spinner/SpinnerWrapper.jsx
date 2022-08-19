@@ -2,22 +2,24 @@ import styled from "styled-components";
 
 const SpinnerWrapper = styled.div`
   .spinner {
-    position: relative;
-
+    position: fixed;
     box-shadow: 0px 5px 10px 80px #1c1c1c;
     -webkit-box-shadow: 0px 5px 10px #1c1c1c;
     -moz-box-shadow: 0px 5px 10px #1c1c1c;
+    background-color: rgb(28, 28, 28, 0.8);
     width: 100%;
     height: 100vh;
+    z-index: 100;
+    display: grid;
+    place-items: center;
   }
   .app__spinner {
-    position: fixed;
     display: grid;
     place-items: center;
     gap: 14px;
     top: calc(50% - 40px);
     left: calc(50% - 40px);
-    z-index: 500;
+    width: 100%;
   }
 
   .loader {
