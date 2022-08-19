@@ -9,7 +9,8 @@ const HeaderWrapper = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-image: url(${Background});
+    // background-image: url(${Background});
+    background-color: #414455;
   }
 
   header {
