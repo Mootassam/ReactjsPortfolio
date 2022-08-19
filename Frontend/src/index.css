@@ -200,6 +200,14 @@ a {
 .app__content {
   background-color: var(--background-color);
 }
+.app {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  position: relative;
+}
 
 /* **** Styling the header the version Desktop *****/
 

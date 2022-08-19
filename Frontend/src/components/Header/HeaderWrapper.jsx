@@ -1,14 +1,6 @@
 import styled from "styled-components";
 import Background from "../../assets/background_header.jpg";
 const HeaderWrapper = styled.div`
-  .app {
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-    clear: both;
-    float: left;
-    position: relative;
-  }
   .app__header {
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,7 +63,6 @@ const HeaderWrapper = styled.div`
     gap: 3rem;
     align-items: center;
   }
-
 
   .header__links > ul > li:nth-last-child(1) {
     padding: 8px 35px 7px;
@@ -157,7 +148,7 @@ const HeaderWrapper = styled.div`
   }
 
   /* **** Styling the header Content ***** */
-  
+
   .header__content {
     width: 100%;
     height: auto;

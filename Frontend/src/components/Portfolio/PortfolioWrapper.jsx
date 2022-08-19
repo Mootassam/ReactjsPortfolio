@@ -3,6 +3,7 @@ import styled from "styled-components";
 const PortfolioWrapper = styled.div`
   .app__portfolio {
     display: flex;
+    
     padding: 11.5625rem 0rem 5rem;
     flex-direction: column;
     text-align: center;
