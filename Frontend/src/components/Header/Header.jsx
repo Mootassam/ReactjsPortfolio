@@ -41,6 +41,7 @@ function Header() {
               <div className='content'>
                 <div className='header__logo'>
                   <img
+                    class='lazyload'
                     src={
                       "https://marketifythemes.net/html/dizme/img/logo/dark.png"
                     }
@@ -131,15 +132,31 @@ function Header() {
                       </div>
                     </div>
                     <div className='content__right'>
-                      <img src={urlFor(item.avatar)} alt=' avatar' />
+                      <img
+                        class='lazyload'
+                        src={urlFor(item.avatar)}
+                        alt=' avatar'
+                      />
                       <div className='reactjs'>
-                        <img src={urlFor(item.skills1)} alt='photo reactjs' />
+                        <img
+                          class='lazyload'
+                          src={urlFor(item.skills1)}
+                          alt='photo reactjs'
+                        />
                       </div>
                       <div className='redux'>
-                        <img src={urlFor(item.skills2)} alt='photo redux' />
+                        <img
+                          class='lazyload'
+                          src={urlFor(item.skills2)}
+                          alt='photo redux'
+                        />
                       </div>
                       <div className='scss'>
-                        <img src={urlFor(item.skills3)} alt='photo redux' />
+                        <img
+                          class='lazyload'
+                          src={urlFor(item.skills3)}
+                          alt='photo redux'
+                        />
                       </div>
                     </div>
                   </div>

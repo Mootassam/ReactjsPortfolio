@@ -33,8 +33,8 @@ function About() {
           <div className='app__detaills'>
             <motion.div animate={{ y: 0 }} className='detaill_target'>
               <div className='detaills__image'>
-                <img src={process1} alt='' />
-                <img src={target} alt='Target' />
+                <img class='lazyload' src={process1} alt='' />
+                <img class='lazyload' src={target} alt='Target' />
               </div>
               <h3>Pixel Perfect code</h3>
               <p>
@@ -44,8 +44,8 @@ function About() {
             </motion.div>
             <div className='detaill__brush'>
               <div className='detaills__image'>
-                <img src={process2} alt='' />
-                <img src={brush} alt='Brush' />
+                <img class='lazyload' src={process2} alt='' />
+                <img class='lazyload' src={brush} alt='Brush' />
               </div>
               <h3>High Quality</h3>
               <p>
@@ -55,8 +55,8 @@ function About() {
             </div>
             <div className='detaill__energy'>
               <div className='detaills__image'>
-                <img src={process3} alt='' />
-                <img src={energy} alt='Energy' />
+                <img class='lazyload' src={process3} alt='' />
+                <img class='lazyload' src={energy} alt='Energy' />
               </div>
               <h3>Awesome Idea</h3>
               <p>
@@ -70,7 +70,7 @@ function About() {
               <div className='about'>
                 <div className='about__left'>
                   {/* Image 18 Years of Success 9 Total Projects */}
-                  <img src={urlFor(item.image)} alt='About' />
+                  <img class='lazyload' src={urlFor(item.image)} alt='About' />
                   <div className='about__years'>
                     <span className='years'> 18</span>
                     <span className='project'>
@@ -99,10 +99,10 @@ function About() {
                 </div>
                 <div className='about__images'>
                   <div className='image__about__left'>
-                    <img src={about1} alt='About Image' />
+                    <img class='lazyload' src={about1} alt='About Image' />
                   </div>
                   <div className='images__about__right'>
-                    <img src={about2} alt='About Image' />
+                    <img class='lazyload' src={about2} alt='About Image' />
                   </div>
                 </div>
               </div>

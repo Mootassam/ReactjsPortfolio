@@ -159,10 +159,10 @@ function Contact() {
           </div>
           <div className='address__images'>
             <div className='images__left'>
-              <img src={contact1} alt='Image contact' />
+              <img class='lazyload' src={contact1} alt='Image contact' />
             </div>
             <div className='images__right'>
-              <img src={contact2} alt='Image contact' />
+              <img class='lazyload' src={contact2} alt='Image contact' />
             </div>
           </div>
         </div>
