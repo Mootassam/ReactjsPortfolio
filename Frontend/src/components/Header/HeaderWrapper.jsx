@@ -534,7 +534,7 @@ const HeaderWrapper = styled.div`
       display: none;
     }
     .header__menue {
-      padding: 0 20px;
+      padding: 0 18px;
     }
     .container {
       padding: 0 20px;
